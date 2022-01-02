@@ -10,11 +10,15 @@ html {
 
 body {
   margin: 0;
-  font-family: 'UniNeue', sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: 400;
   color: $main;
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 
 }
 
@@ -35,7 +39,8 @@ ul {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
 
   margin: 0;
 
@@ -61,8 +66,7 @@ p {
 
 .container {
 
-  max-width: 1920px;
-  margin: 0 auto;
+  display: flex;
 
 }
 
@@ -73,6 +77,65 @@ p {
   background: transparent;
   cursor: pointer;
 
+}
+
+.title {
+
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $dark-blue;
+
+  &--light-blue {
+
+    color: $blue;
+
+  }
+
+}
+
+.subtitle {
+
+  font-size: 18px;
+  color: $main;
+  line-height: 1;
+
+}
+
+.main {
+
+  section:not(:last-child) {
+
+    padding-bottom: 40px;
+
+  }
+
+}
+
+@media (max-width: 670px) {
+
+  .container {
+
+    flex-direction: column;
+
+  }
+  
+}
+
+@media (max-width: 480px) {
+
+  .title {
+
+    font-size: 18px;
+
+  }
+
+  .subtitle {
+
+    font-size: 16px;
+
+  }
+  
 }
 
 
